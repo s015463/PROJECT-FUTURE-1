@@ -1,0 +1,67 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    /* PATVARKYTI SITA SU CLAMP(40px, x, 52px) */
+    gap: 40px;
+    text-align: center;
+    padding: 60px 16px 40px 16px;
+}
+&__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+&__picture{
+    width: 100%;
+    height: clamp(280px, 50vw, 510px);
+}
+&__picture img{
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+&__content-wrapper p {
+    margin-bottom: 20px;
+}
+&p{
+    max-width: 63ch;
+}
+
+&content-wrapper,
+&h1 {
+    flex: 1;
+}
+
+
+
+@media (min-width: 768px){
+    .main-section {
+        padding: 60px 32px 40px 32px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .main-section {
+        padding: 60px 40px 52px 40px;
+    }
+}
+
+/* H1 tago stilius .main-section elemente */
+@media (max-width: 1279px) {
+    .main-section h1 {
+        max-width: 578px;
+    }
+
+   
+}
+
+@media (min-width: 1280px) {
+    .main-section .main-section__content{
+        flex-direction: row;
+        text-align: left;
+        align-items: start;
+    }
+}

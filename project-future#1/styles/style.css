@@ -1,0 +1,89 @@
+
+
+/*  VIRSUTINE NAVIGACIJA PABAIGA */
+/*  PAGRINDINIO TURINIO ATVAIZDAVIMAS */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    /* PATVARKYTI SITA SU CLAMP(40px, x, 52px) */
+    gap: 40px;
+    text-align: center;
+    padding: 60px 16px 40px 16px;
+}
+
+.main-section .main-section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section .main-section__picture {
+    width: 100%;
+    height: clamp(280px, 50vw, 510px);
+}
+
+.main-section .main-section__picture img {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-section .main-section__content-wrapper p {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px){
+    .main-section {
+        padding: 60px 32px 40px 32px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .main-section {
+        padding: 60px 40px 52px 40px;
+    }
+}
+
+/* H1 tago stilius .main-section elemente */
+@media (max-width: 1279px) {
+    .main-section h1 {
+        max-width: 578px;
+    }
+
+    .main-section p {
+        max-width: 63ch;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main-section .main-section__content{
+        flex-direction: row;
+        text-align: left;
+        align-items: start;
+    }
+
+    .main-section h1,
+    .main-section .main-section__content-wrapper {
+        flex: 1;
+    }
+}
+
+/*  PAGRINDINIO TURINIO PABAIGA */
+/*  SERVICES SECTION */
+
+.services-section {
+    /* isdestymas elementu */
+}
+
+.services-section .services-section__article {
+    background-color: var(--services-bg-color);
+    border-radius: 20px;
+    padding: 24px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
